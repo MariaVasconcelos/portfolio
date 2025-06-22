@@ -11,6 +11,7 @@ body {
     color: var(--white);
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 a {
@@ -23,8 +24,21 @@ ul, h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+button {
+    background-color: transparent;
+    outline: transparent;
+    border: transparent;
+}
+
 strong {
     color: var(--purple);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .title {
@@ -94,13 +108,19 @@ strong {
     width: 100%;
 }
 
-/* Main
+/* Animations
 ------------------------------ */
 
 .globe-image {
     max-width: 100%;
     animation-name: globe;
     animation: globe 60s linear infinite;
+}
+
+.down-arrow {
+    position: relative;
+    top: 0;
+    animation: upAndDown 1.5s infinite linear;
 }
 
 /*
@@ -120,10 +140,103 @@ strong {
     */
 
 @keyframes globe {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes upAndDown {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: -10px;
+    }
+
+    100% {
+        top: -0px;
+    }
+}
+
+/* About me - Sobre mim
+------------------------------ */
+
+.about-title {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.about-text {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.about-decoration {
+    width: 100%;
+    display: block;
+}
+
+#java-icon, #python-icon {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+}
+
+#java-icon{
+    top: 50px;
+    left: 0;
+}
+
+#python-icon {
+    bottom: 0;
+    left: 340px;
+}
+
+/* Projects - Projetos
+------------------------------ */
+
+.projects {
+    background-image: url(../assets/background.svg);
+    background-size: cover;
+}
+
+.projects-title {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.projects-item {
+    padding: 60px;
+    background-color: #393e4687;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-item img {
+    height: 150px;
+    max-width: 100%;
+}
+
+.swiper-projects .swiper-projects-prev, 
+.swiper-projects .swiper-projects-next {
+    position: absolute;
+    top: 50%;
+    z-index: 9;
+}
+
+.swiper-projects .swiper-projects-prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-projects .swiper-projects-next {
+    right: 0;
+    transform: translate(50%, -50%);
 }
