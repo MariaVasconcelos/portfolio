@@ -28,6 +28,7 @@ button {
     background-color: transparent;
     outline: transparent;
     border: transparent;
+    color: inherit;
 }
 
 strong {
@@ -39,6 +40,48 @@ section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+}
+
+input {
+    width: 100%;
+    background-color: var(--gray-700);
+    border: 0;
+    outline: 0;
+    height: 60px;
+    border-radius: 16px;
+    padding: 16px 24px;
+    font-size: 18px;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+input::placeholder {
+    font-weight: 700;
+    color: var(--gray-200);
+    opacity: 0.5;
+}
+
+input:focus {
+    border: 2px solid var(--purple);
+}
+
+textarea {
+    width: 100%;
+    background-color: var(--gray-700);
+    border: 0;
+    outline: 0;  
+    border-radius: 16px;
+    padding: 16px 24px;
+    font-size: 18px;
+    color: var(--white);
+    transition: 0.3s;
+    resize: none;
+    height: 250px !important;
+}
+
+label {
+    font-weight: 700;
+    color: 18px;
 }
 
 .title {
@@ -71,6 +114,19 @@ section {
 
 .button.gray-700 {
     background-color: var(--gray-700);
+    font-weight: 700;
+}
+
+@media (max-width:1200px) {
+    .title {
+        font-size: 54px;
+    }
+}
+
+@media (max-width:572px) {
+    .title {
+        font-size: 34px;
+    }
 }
 
 /* Header
@@ -108,8 +164,46 @@ section {
     width: 100%;
 }
 
+.header-mobile {
+    position: fixed ;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray-900);
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+
+.header-mobile.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateX(0);
+}
+
+.header-mobile hr{
+    background-color: var(--purple);
+    border: 2px solid var(--purple);
+}
+
+.header-mobile-links {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 /* Animations
 ------------------------------ */
+
+.globe-image-area {
+    overflow: hidden;
+}
 
 .globe-image {
     max-width: 100%;
@@ -197,6 +291,36 @@ section {
     left: 340px;
 }
 
+@media (max-width: 1400px) {
+    
+    #java-icon {
+        display: none;
+    }
+
+    #python-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-title {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 992px) {
+    .globe-image-area {
+        display: flex;
+        justify-content: center;   
+ }
+}
+
+@media (max-width:572px) {
+    .about-title {
+        font-size: 34px;
+    }
+}
+
 /* Projects - Projetos
 ------------------------------ */
 
@@ -212,7 +336,7 @@ section {
 
 .projects-item {
     padding: 60px;
-    background-color: #393e4687;
+    background-color: #8393e467;
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -239,4 +363,80 @@ section {
 .swiper-projects .swiper-projects-next {
     right: 0;
     transform: translate(50%, -50%);
+}
+
+@media (max-width: 1200px) {
+    .projects-title {
+        font-size: 54px;
+    }
+}
+
+@media (max-width:572px) {
+    .projects-title {
+        font-size: 34px;
+    }
+
+    .swiper-projects .swiper-projects-prev, 
+    .swiper-projects .swiper-projects-next {
+        position: static;
+        transform: none;
+    }
+}
+
+/* Contact - Contato
+------------------------------ */
+
+.contact-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+@media (max-width: 1200px) {
+    .contact-title {
+        font-size: 54px;
+    }
+}
+
+@media (max-width:572px) {
+    .contact-title {
+        font-size: 34px;
+    }
+}
+
+/* Footer - Rodapé
+------------------------------ */
+
+.footer {
+    border-top: 1px solid #eeeeee7e;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.footer-link {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--purple);
+}
+
+.footer-link svg path {
+    transition: 0.3s;
+}
+
+.footer-link:hover svg path {
+    stroke: var(--purple);
 }

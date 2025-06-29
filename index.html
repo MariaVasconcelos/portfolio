@@ -19,7 +19,7 @@
     <header class="py-5 header">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-8 col-lg-6">
                     <a title="Início" href="index.html">
                         <h1>
                             <img src="assets/logo.svg" alt="Maria Vasconcelos">
@@ -27,30 +27,67 @@
                     </a>
                 </div>
 
-                <div class="col-6 d-flex align-items-center justify-content-end">
-                    <nav>
+                <div class="col-4 col-lg-6 d-flex align-items-center justify-content-end">
+
+                    <button aria-expanded="false" aria-label="Abrir menu" id="menu-open">
+                        <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.185059 1.04626H30M0.185059 8.5H30M0.185059 15.9537H30" stroke="#7A1CAC" stroke-width="1.5"></path></svg>
+                    </button>
+
+                    <nav class="d-none d-lg-flex">
                         <ul class="header-links">
                             <li><a href="#inicio">Início</a></li>
-                            <li><a href="#sobre-mim">Sobre mim</a></li>
+                            <li><a href="#sobre">Sobre mim</a></li>
                             <li><a href="#projetos">Projetos</a></li>
                             <li><a href="#contato">Contato</a></li>
-
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
+
+        <div aria-hidden="true" class="header-mobile" id="header-mobile">
+            <div class="container">
+                <div class="row py-5">
+
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <img src="assets/logo.svg" alt="Maria Vasconcelos">
+
+                        <button aria-label="Fechar menu" aria-expanded="false" id="closeMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="40px" height="40px" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M315.3 411.3c-6.253 6.253-16.37 6.253-22.63 0L160 278.6l-132.7 132.7c-6.253 6.253-16.37 6.253-22.63 0c-6.253-6.253-6.253-16.37 0-22.63L137.4 256L4.69 123.3c-6.253-6.253-6.253-16.37 0-22.63c6.253-6.253 16.37-6.253 22.63 0L160 233.4l132.7-132.7c6.253-6.253 16.37-6.253 22.63 0c6.253 6.253 6.253 16.37 0 22.63L182.6 256l132.7 132.7C321.6 394.9 321.6 405.1 315.3 411.3z"></path></svg>
+                        </button>
+                    </div>
+
+                    <div class="col-12 py-3">
+                        <hr>
+                    </div>
+                    
+                    <div class="col-12">
+                        <nav>
+                            <ul class="header-mobile-links">
+                                <li><a href="#inicio">Início</a></li>
+                                <li><a href="#sobre">Sobre mim</a></li>
+                                <li><a href="#projetos">Projetos</a></li>
+                                <li><a href="#contato">Contato</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </header>
 
     <main>
 
-        <section class="pt-5">
+        <section id="inicio" class="pt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-7 d-flex justify-content-center flex-column">
+                    <div class="col-12 col-lg-7 d-flex justify-content-center flex-column">
                         <h2 class="title">Desenvolvedora <strong>Web</strong></h2>
 
-                        <div class="mt-5 d-flex gap-4">
+                        <div class="mt-5 d-flex flex-wrap gap-4">
                             <a class="button purple" href="#contato">Entre em contato</a>
 
                             <a class="button gray-700 has-icon" title="Baixar Currículo" href="">
@@ -62,7 +99,7 @@
                         </div>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-12 col-lg-5 py-5 p-lg-0 globe-image-area">
                         <img class="globe-image" src="assets/globe.svg" aria-hidden="true">
                     </div>
 
@@ -78,7 +115,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="sobre">
             <div class="container">
                 <div class="row pt-5 position-relative d-flex align-items-center flex-wrap">
 
@@ -91,7 +128,7 @@
                     </div>
                    
 
-                    <div class="col-4">
+                    <div class="col-12 col-xl-4">
 
                         <h2 class="about-title">
                             Sobre <strong>mim</strong>
@@ -101,7 +138,7 @@
 
                     </div>
 
-                    <div class="offset-1 col-7">
+                    <div class="offset-1-xl py-5 py-xl-0 col-12 col-xl-7">
                         <img class="about-decoration" draggable="false" src="assets/doodle-square.png" aria-hidden="true">
                     </div>
 
@@ -109,7 +146,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section id="projetos" class="projects">
             <div class="container">
                 <div class="row">
 
@@ -150,13 +187,15 @@
 
                             </div>
 
-                            <button class="swiper-projects-prev" title="Ir para o próximo slide">
-                                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="35" cy="35" r="35" transform="matrix(-1 0 0 1 70 0)" fill="transparent"></circle><circle cx="25" cy="25" r="25" transform="matrix(-1 0 0 1 60 10)" fill="#7A1CAC"></circle><path d="M25.0075 36.4213C24.6169 36.0308 24.6169 35.3977 25.0075 35.0071L31.3714 28.6432C31.7619 28.2526 32.3951 28.2526 32.7856 28.6432C33.1762 29.0337 33.1762 29.6669 32.7856 30.0574L27.1288 35.7142L32.7856 41.3711C33.1762 41.7616 33.1762 42.3948 32.7856 42.7853C32.3951 43.1758 31.7619 43.1758 31.3714 42.7853L25.0075 36.4213ZM42.8574 35.7142V36.7142H25.7146V35.7142V34.7142H42.8574V35.7142Z" fill="#1E1E1E"></path></svg>                            
-                            </button>
+                            <div class="col-12 pt-5 pt-sm-0">
+                                <button class="swiper-projects-prev" title="Ir para o próximo slide">
+                                    <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="35" cy="35" r="35" transform="matrix(-1 0 0 1 70 0)" fill="transparent"></circle><circle cx="25" cy="25" r="25" transform="matrix(-1 0 0 1 60 10)" fill="#7A1CAC"></circle><path d="M25.0075 36.4213C24.6169 36.0308 24.6169 35.3977 25.0075 35.0071L31.3714 28.6432C31.7619 28.2526 32.3951 28.2526 32.7856 28.6432C33.1762 29.0337 33.1762 29.6669 32.7856 30.0574L27.1288 35.7142L32.7856 41.3711C33.1762 41.7616 33.1762 42.3948 32.7856 42.7853C32.3951 43.1758 31.7619 43.1758 31.3714 42.7853L25.0075 36.4213ZM42.8574 35.7142V36.7142H25.7146V35.7142V34.7142H42.8574V35.7142Z" fill="#1E1E1E"></path></svg>                            
+                                </button>
 
-                            <button class="swiper-projects-next" title="Ir para o slide anterior">
-                                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="35" cy="35" r="35" fill="transparent"></circle><circle cx="35" cy="35" r="25" fill="#7A1CAC"></circle><path d="M44.3225 35.7071C44.713 35.3166 44.713 34.6834 44.3225 34.2929L37.9585 27.9289C37.568 27.5384 36.9348 27.5384 36.5443 27.9289C36.1538 28.3195 36.1538 28.9526 36.5443 29.3431L42.2012 35L36.5443 40.6569C36.1538 41.0474 36.1538 41.6805 36.5443 42.0711C36.9348 42.4616 37.568 42.4616 37.9585 42.0711L44.3225 35.7071ZM27 35V36H43.6154V35V34H27V35Z" fill="#1E1E1E"></path></svg>
-                            </button>
+                                <button class="swiper-projects-next" title="Ir para o slide anterior">
+                                    <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="35" cy="35" r="35" fill="transparent"></circle><circle cx="35" cy="35" r="25" fill="#7A1CAC"></circle><path d="M44.3225 35.7071C44.713 35.3166 44.713 34.6834 44.3225 34.2929L37.9585 27.9289C37.568 27.5384 36.9348 27.5384 36.5443 27.9289C36.1538 28.3195 36.1538 28.9526 36.5443 29.3431L42.2012 35L36.5443 40.6569C36.1538 41.0474 36.1538 41.6805 36.5443 42.0711C36.9348 42.4616 37.568 42.4616 37.9585 42.0711L44.3225 35.7071ZM27 35V36H43.6154V35V34H27V35Z" fill="#1E1E1E"></path></svg>
+                                </button>
+                            </div>
 
                         </div>
                     </div>
@@ -165,7 +204,107 @@
             </div>
         </section>
 
+        <section id="contato" class="contact">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 col-xxl-3">
+                        <h2 class="contact-title">Entre em <strong>contato</strong></h2>
+                    </div>
+
+                    <form method="post" class="col-12 col-xxl-6 d-flex flex-wrap offset-xxl-3 pt-xl-5">
+                        <div class="col-6 p-2">
+                            <div>
+                                <label class="mb-2" for="nome">Nome</label>
+                                <input required placeholder="Nome" type="text" id="nome" name="nome">
+                            </div>
+                        </div>
+
+                        <div class="col-6 p-2">
+                            <div>
+                                <label class="mb-2" for="nome">E-mail</label>
+                                <input required placeholder="E-mail" type="email" id="email" name="email">
+                            </div>
+                        </div>
+
+                        <div class="col-12 p-2">
+                            <label class="mb-2" for="mensagem">Mensagem</label>
+                            <textarea required placeholder="Mensagem" name="mensagem" id="mensagem" name="mensagem"></textarea>
+                        </div>
+
+                        <div class="col-12 p-2">
+
+                            <button role="submit" class="button purple has-icon">
+                                Enviar Mensagem
+                                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 1.5L10 12.5" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 1.5L14 21.5L10 12.5L1 8.5L21 1.5Z" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row pt-2">
+
+                <div class="col-12 pt-5 pb-2">
+                    <nav>
+                        
+                        <ul class="footer-links">
+                            <li>
+                                <a class="footer-link" title="Ir para o Início" href="#inicio">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22V12H15V22" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    Início
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="footer-link"  title="Ir para o Sobre mim" href="#sobre">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    Sobre mim
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="footer-link" title="Ir para os projetos" href="#projetos">
+                                    <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_506_17)"><path d="M15 21.75C15.4125 21.75 15.75 21.4125 15.75 21V7.5H12C11.1703 7.5 10.5 6.82969 10.5 6V2.25H3C2.5875 2.25 2.25 2.5875 2.25 3V21C2.25 21.4125 2.5875 21.75 3 21.75H15ZM0 3C0 1.34531 1.34531 0 3 0H10.7578C11.5547 0 12.3187 0.314063 12.8812 0.876563L17.1234 5.11875C17.6859 5.68125 18 6.44531 18 7.24219V21C18 22.6547 16.6547 24 15 24H3C1.34531 24 0 22.6547 0 21V3Z" fill="#EEEEEE"/></g><defs><clipPath id="clip0_506_17"><rect width="18" height="24" fill="white"/></clipPath></defs></svg>                                    
+                                    Projetos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="footer-link" title="Ir para o Contato" href="#contato">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.0001 16.9201V19.9201C22.0012 20.1986 21.9441 20.4743 21.8326 20.7294C21.721 20.9846 21.5574 21.2137 21.3521 21.402C21.1469 21.5902 20.9046 21.7336 20.6408 21.8228C20.377 21.912 20.0974 21.9452 19.8201 21.9201C16.7429 21.5857 13.7871 20.5342 11.1901 18.8501C8.77388 17.3148 6.72539 15.2663 5.19006 12.8501C3.50003 10.2413 2.4483 7.27109 2.12006 4.1801C2.09507 3.90356 2.12793 3.62486 2.21656 3.36172C2.30518 3.09859 2.44763 2.85679 2.63482 2.65172C2.82202 2.44665 3.04986 2.28281 3.30385 2.17062C3.55783 2.05843 3.8324 2.00036 4.11006 2.0001H7.11006C7.59536 1.99532 8.06585 2.16718 8.43382 2.48363C8.80179 2.80008 9.04213 3.23954 9.11005 3.7201C9.23668 4.68016 9.47151 5.62282 9.81006 6.5301C9.9446 6.88802 9.97372 7.27701 9.89396 7.65098C9.81421 8.02494 9.62892 8.36821 9.36005 8.6401L8.09006 9.9101C9.51361 12.4136 11.5865 14.4865 14.0901 15.9101L15.3601 14.6401C15.6319 14.3712 15.9752 14.1859 16.3492 14.1062C16.7231 14.0264 17.1121 14.0556 17.4701 14.1901C18.3773 14.5286 19.32 14.7635 20.2801 14.8901C20.7658 14.9586 21.2095 15.2033 21.5266 15.5776C21.8437 15.9519 22.0122 16.4297 22.0001 16.9201Z" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    Contato
+                                </a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+
+                <div class="col-12 d-flex flex-wrap justify-content-center py-5 gap-4">
+                    <a class="button has-icon gray-700" title="Ir para o Github" target="_blank" href="https://github.com/MariaVasconcelos">
+                        <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_506_43)"><path d="M7.69294 19.1281C7.69294 19.2219 7.58629 19.2969 7.45181 19.2969C7.29879 19.3109 7.19214 19.2359 7.19214 19.1281C7.19214 19.0344 7.29879 18.9594 7.43327 18.9594C7.57238 18.9453 7.69294 19.0203 7.69294 19.1281ZM6.25081 18.9172C6.21835 19.0109 6.31109 19.1187 6.4502 19.1469C6.57077 19.1937 6.70988 19.1469 6.7377 19.0531C6.76552 18.9594 6.67742 18.8516 6.53831 18.8094C6.41774 18.7766 6.28327 18.8234 6.25081 18.9172ZM8.3004 18.8375C8.16593 18.8703 8.07318 18.9594 8.0871 19.0672C8.10101 19.1609 8.22157 19.2219 8.36069 19.1891C8.49516 19.1562 8.5879 19.0672 8.57399 18.9734C8.56008 18.8844 8.43488 18.8234 8.3004 18.8375ZM11.3516 0.875C4.91996 0.875 0 5.81094 0 12.3125C0 17.5109 3.23669 21.9594 7.85988 23.525C8.45343 23.6328 8.6621 23.2625 8.6621 22.9578C8.6621 22.6672 8.64819 21.0641 8.64819 20.0797C8.64819 20.0797 5.40222 20.7828 4.72056 18.6828C4.72056 18.6828 4.19194 17.3187 3.43145 16.9672C3.43145 16.9672 2.36956 16.2312 3.50565 16.2453C3.50565 16.2453 4.66028 16.3391 5.29556 17.4547C6.31109 19.2641 8.0129 18.7437 8.67601 18.4344C8.78266 17.6844 9.08407 17.1641 9.41794 16.8547C6.82581 16.5641 4.21048 16.1844 4.21048 11.675C4.21048 10.3859 4.5629 9.73906 5.30484 8.91406C5.18427 8.60938 4.79012 7.35312 5.4254 5.73125C6.39456 5.42656 8.625 6.99688 8.625 6.99688C9.55242 6.73438 10.5494 6.59844 11.5371 6.59844C12.5248 6.59844 13.5218 6.73438 14.4492 6.99688C14.4492 6.99688 16.6796 5.42188 17.6488 5.73125C18.2841 7.35781 17.8899 8.60938 17.7694 8.91406C18.5113 9.74375 18.9657 10.3906 18.9657 11.675C18.9657 16.1984 16.2345 16.5594 13.6423 16.8547C14.069 17.225 14.4306 17.9281 14.4306 19.0297C14.4306 20.6094 14.4167 22.5641 14.4167 22.9484C14.4167 23.2531 14.63 23.6234 15.219 23.5156C19.856 21.9594 23 17.5109 23 12.3125C23 5.81094 17.7833 0.875 11.3516 0.875ZM4.50726 17.0422C4.44698 17.0891 4.46089 17.1969 4.53972 17.2859C4.61391 17.3609 4.72056 17.3938 4.78085 17.3328C4.84113 17.2859 4.82722 17.1781 4.74839 17.0891C4.67419 17.0141 4.56754 16.9812 4.50726 17.0422ZM4.00645 16.6625C3.97399 16.7234 4.02036 16.7984 4.1131 16.8453C4.1873 16.8922 4.28004 16.8781 4.3125 16.8125C4.34496 16.7516 4.29859 16.6766 4.20585 16.6297C4.1131 16.6016 4.03891 16.6156 4.00645 16.6625ZM5.50887 18.3312C5.43468 18.3922 5.4625 18.5328 5.56915 18.6219C5.67581 18.7297 5.81028 18.7437 5.87056 18.6688C5.93085 18.6078 5.90302 18.4672 5.81028 18.3781C5.70827 18.2703 5.56915 18.2563 5.50887 18.3312ZM4.98024 17.6422C4.90605 17.6891 4.90605 17.8109 4.98024 17.9188C5.05444 18.0266 5.17964 18.0734 5.23992 18.0266C5.31411 17.9656 5.31411 17.8438 5.23992 17.7359C5.175 17.6281 5.05444 17.5813 4.98024 17.6422Z" fill="#EEEEEE"/></g><defs><clipPath id="clip0_506_43"><rect width="23" height="24" fill="white" transform="translate(0 0.5)"/></clipPath></defs></svg>
+
+                        Github
+                    </a>
+                    
+                    <a class="button has-icon gray-700" title="Ir para o LinkedIn" target="_blank" href="https://www.linkedin.com/in/maria-eduarda-vasconcelos-49309a300/">
+                       <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 2H1.49531C0.670312 2 0 2.67969 0 3.51406V21.4859C0 22.3203 0.670312 23 1.49531 23H19.5C20.325 23 21 22.3203 21 21.4859V3.51406C21 2.67969 20.325 2 19.5 2ZM6.34687 20H3.23438V9.97812H6.35156V20H6.34687ZM4.79062 8.60938C3.79219 8.60938 2.98594 7.79844 2.98594 6.80469C2.98594 5.81094 3.79219 5 4.79062 5C5.78437 5 6.59531 5.81094 6.59531 6.80469C6.59531 7.80312 5.78906 8.60938 4.79062 8.60938ZM18.0141 20H14.9016V15.125C14.9016 13.9625 14.8781 12.4672 13.2844 12.4672C11.6625 12.4672 11.4141 13.7328 11.4141 15.0406V20H8.30156V9.97812H11.2875V11.3469H11.3297C11.7469 10.5594 12.7641 9.72969 14.2781 9.72969C17.4281 9.72969 18.0141 11.8062 18.0141 14.5062V20Z" fill="#EEEEEE"/></svg>
+                    
+                        LinkedIn
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
 <script src="scripts/minified/swiper-bundle.min.js"></script>
 <script src="scripts/script.js"></script>
